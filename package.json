@@ -1,18 +1,37 @@
 {
   "name": "jawara",
-  "type": "module",
+  "description": "Jawara Corporation",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier -w .",
+    "lint:script": "eslint . --ext .js,.ts,.astro"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vercel": "^5.0.2",
+    "@fontsource-variable/inter": "^5.0.15",
     "astro": "^3.3.1",
     "tailwindcss": "^3.3.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-astro": "^0.29.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1",
+    "tailwind-merge": "^1.14.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.14.1"
   }
 }
