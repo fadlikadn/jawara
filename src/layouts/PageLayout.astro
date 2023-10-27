@@ -1,0 +1,12 @@
+---
+import Layout from '~/layouts/Layout.astro'
+import type { MetaData } from '~/types'
+export interface Props {
+  metadata?: MetaData
+}
+
+const { metadata } = Astro.props
+---
+
+<Layout metadata={metadata}>
+</Layout>
