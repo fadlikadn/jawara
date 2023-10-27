@@ -1,13 +1,28 @@
 ---
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Layout from '~/layouts/LandingLayout.astro';
 import type { MetaData } from '~/types';
 
 const metadata: MetaData = {
 	title: 'Jawara Corporation',
 }
+
 ---
 
 <Layout metadata={metadata}>
-	Jawara Corporation
+	<Hero2
+		tagline="Tagline Here"
+		title="Pre-launch of Jawara.co"
+		subtitle="Manage your property asset easily"
+		actions={[
+			{ variant: 'primary', text: 'Pelajari lebih jauh', href:"#", icon: 'tabler:square-rounded-arrow-right'}
+		]}
+
+		image={{
+			// src: 'https://images.unsplash.com/photo-1558803116-c1b4ac867b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+			src: 'https://images.unsplash.com/photo-1565402170291-8491f14678db?auto=format&fit=crop&q=80&w=1417&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+			alt: 'Jawara Corporation Coming Soon',
+		}}
+	/>
 </Layout>
 
