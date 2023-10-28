@@ -63,6 +63,6 @@ export const footerData = {
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://djawara.co/">Jawara Team</a> · All rights reserved.
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://djawara.co/">dJawara Team</a> · All rights reserved.
   `,
 };

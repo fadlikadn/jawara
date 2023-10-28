@@ -1,5 +1,5 @@
 site:
-  name: Jawara
+  name: dJawara
   site: 'https://djawara.co'
   base: '/'
   trailingSlash: false
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Jawara
-    template: '%s — Jawara'
-  description: "Jawara Corporation"
+    default: dJawara
+    template: '%s — dJawara'
+  description: "dJawara Corporation"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Jawara
+    site_name: dJawara
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@djawara'
+    site: '@djawara'
     cardType: summary_large_image
 
 i18n:
