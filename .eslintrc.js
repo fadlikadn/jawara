@@ -5,14 +5,28 @@ module.exports = {
     es2022: true,
     browser: true,
   },
-  extends: ['eslint:recommended', 'plugin:astro/recommended'],
+  extends: ['eslint:recommended', 'plugin:astro/recommended', 'plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        trailingComma: 'all',
+        tabWidth: 2,
+        semi: false,
+        singleQuote: true,
+        bracketSpacing: true,
+        eslintIntegration: true,
+        printWidth: 120,
+      },
+    ],
+  },
   overrides: [
     {
       files: ['*.js'],
@@ -38,7 +52,10 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-unused-vars': [
           'error',
-          { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
+          {
+            argsIgnorePattern: '^_',
+            destructuredArrayIgnorePattern: '^_',
+          },
         ],
         '@typescript-eslint/no-non-null-assertion': 'off',
       },
@@ -50,4 +67,4 @@ module.exports = {
       parser: '@typescript-eslint/parser',
     },
   ],
-};
+}
