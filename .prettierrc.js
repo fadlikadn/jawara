@@ -1,13 +1,15 @@
-/** @type {import('prettier').Config} */
+/** @type {import("prettier").Config} */
 module.exports = {
-  printWidth: 120,
-  semi: true,
-  singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'es5',
-  useTabs: false,
-
+  // i am just using the standard config, change if you need something else
+  ...require('prettier-config-standard'),
+  pluginSearchDirs: [__dirname],
   plugins: [require.resolve('prettier-plugin-astro')],
-
-  overrides: [{ files: '*.astro', options: { parser: 'astro' } }],
-};
+  overrides: [
+    {
+      files: '*.astro',
+      options: {
+        parser: 'astro'
+      }
+    }
+  ]
+}
