@@ -1,28 +1,171 @@
 ---
-import Hero2 from '~/components/widgets/Hero2.astro';
-import Layout from '~/layouts/LandingLayout.astro';
-import type { MetaData } from '~/types';
+import Hero2 from '~/components/widgets/Hero2.astro'
+import PageLayout from '~/layouts/PageLayout.astro'
+import Content from '~/components/widgets/Content.astro'
+import type { MetaData } from '~/types'
+import Steps2 from '~/components/widgets/Steps2.astro'
 
 const metadata: MetaData = {
-	title: 'dJawara Corporation',
+  title: 'dJawara Corporation',
 }
-
 ---
 
-<Layout metadata={metadata}>
-	<Hero2
-		tagline="Tagline Here"
-		title="Pre-launch of dJawara.co"
-		subtitle="Manage your property asset easily"
-		actions={[
-			{ variant: 'primary', text: 'Pelajari lebih jauh', href:"#", icon: 'tabler:square-rounded-arrow-right'}
+<PageLayout metadata={metadata}>
+  <Hero2
+    tagline='Mohon, Mangesthi, Mangastuti, Marem'
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pelajari lebih jauh',
+        href: '#services',
+        icon: 'tabler:square-rounded-arrow-right',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1565402170291-8491f14678db?auto=format&fit=crop&q=80&w=1417&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'dJawara Corporation Coming Soon',
+    }}
+  >
+    <Fragment slot='title'>dJawara Corporation</Fragment>
+    <Fragment slot='subtitle'>
+      <span class='font-semibold'>ONE-STOP SOLUTION</span> for your real-estate business.
+    </Fragment>
+  </Hero2>
+  <!-- <Features2
+		id="features"
+		title="Mengapa memilih kami?"
+		subtitle="Masing-masing fitur kami akan mengoptimalkan bisnis Anda."
+		columns={2}
+		items={[
+			{
+        title: 'Kelebihan #1',
+        description:
+          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: 'Kelebihan #2',
+        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Kelebihan #3',
+        description:
+          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Kelebihan #4',
+        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Kelebihan #5',
+        description: `Using Astro 3.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Kelebihan #6',
+        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
+        icon: 'tabler:eyeglass',
+      },
 		]}
+	/> -->
 
-		image={{
-			// src: 'https://images.unsplash.com/photo-1558803116-c1b4ac867b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-			src: 'https://images.unsplash.com/photo-1565402170291-8491f14678db?auto=format&fit=crop&q=80&w=1417&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-			alt: 'dJawara Corporation Coming Soon',
-		}}
-	/>
-</Layout>
+  <!-- Solution #2 -->
+  <Content
+    id='services'
+    title='Layanan kami'
+    subtitle='Temukan layanan terbaik kami dalam mendukung operasional bisnis Anda.'
+    isReversed
+    items={[
+      {
+        title: 'Kelebihan:',
+        description:
+          'Merupakan sistem aplikasi monitoring cashflow berbasis cloud platform yang dapat melakukan monitoring tata kelola transaksi keuangan proyek secara akurat dan real-time',
+      },
+      {
+        title: 'Fitur:',
+        description: `Transaction Notifications. <br /> Project cost submission melalu e-form dengan approval matrix. <br /> Realtime monitoring Dashboard. <br /> Transaction Report. <br/> Multiple Project Monitoring`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'dJawara Solution #1',
+    }}
+  >
+    <Fragment slot='content'>
+      <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>
+        CAMOD <br /><span class='text-2xl'>Cashflow Monitoring Dashboard</span>
+      </h3>
+    </Fragment>
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Content>
 
+  <!-- Solution #2 -->
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Kelebihan:',
+        description: `Efektivitias manajemen adalah kunci keberhasilan dalam pengembangan dan penjualan properti. Dengan layanan kami, Anda akan merasakan sejumlah kelebihan yang akan membantu Anda mencapai tujuan Anda dalam industri real estate`,
+      },
+      {
+        title: 'Fitur:',
+        description: `Integration with Financing Module. <br/> Realtime Update. <br/> Scale in Seconds. <br/> Multi user and role.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Site Plan Management',
+    }}
+  >
+    <Fragment slot='content'>
+      <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>
+        Site Plan Management <br /><span class='text-2xl'>Handle your siteplan easily</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Content>
+
+  <!-- Contact Us -->
+  <Steps2
+    title='Alamat Kantor'
+    callToAction={{
+      text: 'Hubungi Kami',
+      href: 'https://wa.me/62812777777',
+      taget: '_blank',
+    }}
+    items={[
+      {
+        title: 'Layanan Email',
+        description: 'djawara@djawara.co',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Layanan Hotline',
+        description: '+6281-277-7777',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Follow us',
+        description: '@djawara',
+        icon: 'tabler:brand-twitter',
+      },
+    ]}
+  >
+    <Fragment slot='subtitle'>
+      <span class='font-semibold'>Djawara Corporation</span><br />
+       Jl. Ahmad Yani Jl. Poncol, Gelangan, Kec. Magelang Tengah, Kota Magelang, Jawa Tengah 56117
+    </Fragment>
+  </Steps2>
+
+  <Steps2>
+    <Fragment slot='subtitle'></Fragment>
+  </Steps2>
+</PageLayout>
