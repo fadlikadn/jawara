@@ -1,15 +1,15 @@
 ---
-import WidgetWrapper from '../ui/WidgetWrapper.astro';
-import type { CallToAction, Widget } from '~/types';
-import Headline from '~/components/ui/Headline.astro';
-import Button from "~/components/ui/Button.astro"
+import WidgetWrapper from '../ui/WidgetWrapper.astro'
+import type { CallToAction, Widget } from '~/types'
+import Headline from '~/components/ui/Headline.astro'
+import Button from '~/components/ui/Button.astro'
 
 interface Props extends Widget {
-  title?: string;
-  subtitle?: string;
-  tagline?: string;
-  callToAction?: CallToAction;
-  actions?: string | CallToAction[];
+  title?: string
+  subtitle?: string
+  tagline?: string
+  callToAction?: CallToAction
+  actions?: string | CallToAction[]
 }
 
 const {
@@ -22,12 +22,12 @@ const {
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
-} = Astro.props as Props;
+} = Astro.props as Props
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <div
-    class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
+    class='max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600'
   >
     <Headline
       title={title}
@@ -41,11 +41,11 @@ const {
     />
     {
       actions && (
-        <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
+        <div class='max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6'>
           {Array.isArray(actions) ? (
             actions.map((action) => (
-              <div class="flex w-full sm:w-auto">
-                <Button {...(action || {})} class="w-full sm:mb-0" />
+              <div class='flex w-full sm:w-auto'>
+                <Button {...(action || {})} class='w-full sm:mb-0' />
               </div>
             ))
           ) : (
