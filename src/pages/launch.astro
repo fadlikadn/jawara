@@ -1,0 +1,90 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import type { MetaData } from '~/types';
+
+const metadata: MetaData = {
+	title: 'dJawara Corporation',
+}
+---
+
+<PageLayout metadata={metadata}>
+	<Hero2
+		tagline="Mohon, Mangesthi, Mangastuti, Marem"
+		actions={[
+			{ variant: 'primary', text: 'Pelajari lebih jauh', href:"#", icon: 'tabler:square-rounded-arrow-right'}
+		]}
+
+		image={{
+			// src: 'https://images.unsplash.com/photo-1558803116-c1b4ac867b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+			src: 'https://images.unsplash.com/photo-1565402170291-8491f14678db?auto=format&fit=crop&q=80&w=1417&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+			alt: 'dJawara Corporation Coming Soon',
+		}}
+	>
+		<Fragment slot="title">
+			dJawara Corporation
+		</Fragment>
+		<Fragment slot="subtitle">
+			<span class="font-semibold">ONE-STOP SOLUTION</span> for your real-estate business.
+		</Fragment>	
+	</Hero2>
+	<Features2
+		id="features"
+		title="Mengapa memilih kami?"
+		subtitle="Masing-masing fitur kami akan mengoptimalkan bisnis Anda."
+		columns={2}
+		items={[
+			{
+        title: 'Kelebihan #1',
+        description:
+          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: 'Kelebihan #2',
+        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Kelebihan #3',
+        description:
+          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Kelebihan #4',
+        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Kelebihan #5',
+        description: `Using Astro 3.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Kelebihan #6',
+        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
+        icon: 'tabler:eyeglass',
+      },
+		]}
+	/>
+
+	<Content
+		title="Layanan kami"
+		subtitle="Temukan layanan terbaik dalam dalam mendukung operasional bisnis Anda."
+		isReversed
+		items={[
+			{
+        title: 'Description:',
+        description:
+          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 3.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
+      },
+			{
+        title: 'Benefits:',
+        description: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
+      },
+		]}
+	></Content>
+</PageLayout>
