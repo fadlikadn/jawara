@@ -3,11 +3,15 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
-    "baseUrl": "C:/source/jawara",
+    "baseUrl": ".",
     "paths": {
       "~/*": [
         "src/*"
-      ]
+      ],
+      // "@/*": [
+      //   "./src/*"
+      // ]
+      // "@/shadcn": ["./components/shadcn/*"],
     },
     "plugins": [
       {

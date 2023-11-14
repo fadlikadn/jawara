@@ -1,9 +1,11 @@
 ---
-import Hero2 from '~/components/widgets/Hero2.astro'
-import PageLayout from '~/layouts/PageLayout.astro'
+// import { Button } from '~/components/shadcn/ui/button'
 import Content from '~/components/widgets/Content.astro'
-import type { MetaData } from '~/types'
+import Hero2 from '~/components/widgets/Hero2.astro'
 import Steps2 from '~/components/widgets/Steps2.astro'
+import PageLayout from '~/layouts/PageLayout.astro'
+import '~/styles/global.css'
+import type { MetaData } from '~/types'
 
 const metadata: MetaData = {
   title: 'dJawara Corporation',
@@ -31,6 +33,7 @@ const metadata: MetaData = {
       <span class='font-semibold'>ONE-STOP SOLUTION</span> for your real-estate business.
     </Fragment>
   </Hero2>
+  <!-- <Button>Test</Button> -->
   <!-- <Features2
 		id="features"
 		title="Mengapa memilih kami?"
