@@ -8,7 +8,14 @@ module.exports = {
     {
       files: '*.astro',
       options: {
-        parser: 'astro'
+        parser: 'astro',
+        semi: false,
+      }
+    },
+    {
+      files: '*.{js,ts,tsx,jsx}',
+      options: {
+        semi: false,
       }
     }
   ]
