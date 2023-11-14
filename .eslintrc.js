@@ -8,7 +8,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:astro/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:react/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
