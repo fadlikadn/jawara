@@ -1,0 +1,27 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import type { MetaData } from "~/types";
+const accessToken = Astro.cookies.get("sb-access-token");
+const refreshToken = Astro.cookies.get("sb-refresh-token");
+
+if (accessToken && refreshToken) {
+  return Astro.redirect("/dashboard");
+}
+
+const metadata: MetaData = {
+  title: 'Sign in',
+}
+---
+
+<Layout metadata={metadata}>
+  <h1>Sign in</h1>
+  <p>New here? <a href="/register">Create an account</a></p>
+  <form action="/api/auth/signin" method="post">
+    <label for="email" for="email">Email</label>
+    <input type="email" name="email" id="email" />
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" />
+    <button type="submit">Login</button>
+  </form>
+</Layout>
+
