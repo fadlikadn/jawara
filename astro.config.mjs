@@ -3,6 +3,7 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
+import vercel from "@astrojs/vercel/serverless"
 import compress from 'astro-compress'
 import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
@@ -11,6 +12,7 @@ import { fileURLToPath } from 'url'
 import { ANALYTICS, SITE } from './src/utils/config.ts'
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs'
 import tasks from './src/utils/tasks'
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const whenExternalScripts = (items = []) =>
   ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown
@@ -78,4 +80,5 @@ export default defineConfig({
       },
     },
   },
+  adapter: vercel(),
 })
