@@ -3,7 +3,7 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import vercel from "@astrojs/vercel/serverless"
+import vercel from '@astrojs/vercel/serverless'
 import compress from 'astro-compress'
 import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
@@ -26,8 +26,8 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  // output: 'static',
-  output: 'server',
+  output: 'static',
+  // output: 'server',
   integrations: [
     tailwind({
       applyBaseStyles: false,
